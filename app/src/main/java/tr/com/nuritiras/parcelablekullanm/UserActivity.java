@@ -15,7 +15,7 @@ public class UserActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         Intent intent = getIntent();
-        User user = intent.getParcelableExtra("userKey");
+        User user = intent.getParcelableExtra("userKey",User.class);
 
         binding.textViewFirstName.setText(user.getFistName());
         binding.textViewLastName.setText(user.getLastName());
